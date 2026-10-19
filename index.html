@@ -119,6 +119,8 @@
       letter-spacing: -.035em;
       text-decoration: none;
       white-space: nowrap;
+              background: none !important;
+        border: none !important;
     }
     .site-nav { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 8px 20px; }
     .site-nav a, .lang button {
@@ -126,7 +128,8 @@
       letter-spacing: .012em;
       text-decoration: none;
     }
-    .site-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+    .site-nav a { display: inline-flex; align-items: center; min-height: 44px;  background: none !important;
+        border: none !important;}
     .site-nav a:hover { text-decoration: none; }
     .site-nav .nav-give { color: var(--accent); font-weight: 500; }
     .lang { display: flex; gap: 3px; align-items: center; border-left: 1px solid var(--rule); padding-left: 8px; }
@@ -284,7 +287,8 @@
     .footer-name { font: 400 35px/1 var(--serif); letter-spacing: -.04em; }
     .footer-description { color: var(--quiet); font-size: 15px; max-width: 24em; margin-top: 13px; }
     .footer-links { display: flex; gap: 15px 27px; flex-wrap: wrap; justify-content: end; }
-    .footer-links a { display: inline-flex; align-items: center; min-height: 44px; font: 400 12px/1.4 var(--sans); text-decoration: none; }
+    .footer-links a { display: inline-flex; align-items: center; min-height: 44px; font: 400 12px/1.4 var(--sans); text-decoration: none;     background: none !important;
+    border: none !important;}
     .footer-links a:hover { text-decoration: none; }
     .footer-links .social-link { gap: 8px; }
     .footer-bottom { border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 30px; margin-top: 70px; padding-top: 20px; font: 400 11px/1.4 var(--sans); color: var(--quiet); }
@@ -511,10 +515,10 @@
         <div class="hero-visual">
           <figure>
             <div class="image-frame">
-              <div class="empty-photo" role="img" aria-label="Emplacement pour une grande photographie">01 — PHOTO À AJOUTER</div>
-              <!-- Replace the div above with: <img src="images/01.jpg" alt="Description de la photographie"> -->
+              <div class="empty-photo" role="img" aria-label="Emplacement pour une grande photographie"></div>
+             <img src="https://ik.imagekit.io/53bnrahwc/545343972_1083610607255493_1887332484318837870_n.jpg" alt="Hero image">
             </div>
-            <figcaption data-en="A photograph from the association can go here.">Une photographie de l'association viendra ici.</figcaption>
+            <figcaption data-en="Our Community.">Notre communauté.</figcaption>
           </figure>
           <svg class="hand-line" viewBox="0 0 120 66" fill="none" aria-hidden="true"><path d="M4 3 C45 4 54 13 80 43 M80 43 L72 30 M80 43 L65 38" stroke="#853c39" stroke-width="1.2" stroke-linecap="round"/></svg>
           <span class="hand hero-hand" data-en="from the field ♥">du terrain ♥</span>
@@ -525,7 +529,8 @@
     <div class="wide-spread container">
       <figure>
         <div class="image-frame tint-c">
-          <div class="empty-photo" role="img" aria-label="Emplacement pour une photographie panoramique">02 — GRANDE PHOTO À AJOUTER</div>
+          <div class="empty-photo" role="img" aria-label="Emplacement pour une photographie panoramique"></div>
+            <img src="https://ik.imagekit.io/53bnrahwc/480562659_937337138549508_8942463859504729005_n.jpg" alt="large image">
         </div>
         <figcaption><span data-en="A moment from daily life or an association visit.">Un moment de vie ou une visite de l'association.</span><span data-en="Tongasoa Zazakely / Madagascar">Tongasoa Zazakely / Madagascar</span></figcaption>
       </figure>
@@ -539,7 +544,11 @@
         </div>
         <div class="current-grid">
           <figure class="current-visual">
-            <div class="image-frame tint-b"><div class="empty-photo" role="img" aria-label="Emplacement pour une photo du projet de vacances">03 — PHOTO DU PROJET À AJOUTER</div></div>
+            <div class="image-frame tint-b"><div class="empty-photo" role="img" aria-label="Emplacement pour une photo du projet de vacances"></div>
+            
+               <img src="https://ik.imagekit.io/53bnrahwc/475142893_1988524454992118_8358979719187781879_n.jpg" alt="large image">
+            
+            </div>
             <figcaption data-en="For the “Nos premières vacances” project.">Pour le projet « Nos premières vacances ».</figcaption>
           </figure>
           <article class="current-copy">
@@ -553,14 +562,24 @@
         </div>
         <div class="field-notes">
           <article class="field-note">
-            <figure><div class="image-frame"><div class="empty-photo" role="img" aria-label="Emplacement pour une photographie à l'orphelinat">04 — PHOTO À AJOUTER</div></div></figure>
+            <figure><div class="image-frame"><div class="empty-photo" role="img" aria-label="Emplacement pour une photographie à l'orphelinat"></div>
+            
+             <img src="https://ik.imagekit.io/53bnrahwc/97219647_841045743073334_6572119060387987456_n.jpg" alt="large image">
+            
+            </div></figure>
             <div class="note-copy">
               <h3 data-en="Everyday life at the orphanage">Le quotidien à l'orphelinat</h3>
               <p data-en="The association contributes to everyday needs, including medical care for children and support for the people who look after them.">L'association participe aux besoins du quotidien, notamment aux soins médicaux des enfants et au soutien des personnes qui s'occupent d'eux.</p>
             </div>
           </article>
           <article class="field-note">
-            <figure><div class="image-frame tint-c"><div class="empty-photo" role="img" aria-label="Emplacement pour une photo d'une cantine">05 — PHOTO À AJOUTER</div></div></figure>
+            <figure><div class="image-frame tint-c"><div class="empty-photo" role="img" aria-label="Emplacement pour une photo d'une cantine">05 — PHOTO À AJOUTER</div>
+            
+            
+             <img src="https://ik.imagekit.io/53bnrahwc/609027900_1172286355054584_3556920593453704574_n.jpg" alt="large image">
+            
+            
+            </div></figure>
             <div class="note-copy">
               <h3 data-en="Meals and dental hygiene">Repas et hygiène dentaire</h3>
               <p data-en="Alongside local partners, Tongasoa Zazakely also helps support a canteen serving hot meals and activities promoting dental hygiene.">Avec des partenaires locaux, Tongasoa Zazakely soutient aussi une cantine proposant des repas chauds et des actions d'hygiène dentaire.</p>
@@ -579,19 +598,32 @@
         </div>
         <div class="work-grid">
           <article class="work-card">
-            <figure><div class="image-frame tint-b"><div class="empty-photo" role="img" aria-label="Emplacement pour une photo des activités quotidiennes">06 — PHOTO À AJOUTER</div></div></figure>
+            <figure><div class="image-frame tint-b"><div class="empty-photo" role="img" aria-label="Emplacement pour une photo des activités quotidiennes"></div>
+            
+             <img src="https://ik.imagekit.io/53bnrahwc/545883257_1083610483922172_54143054127239310_n.jpg" alt="large image">
+            
+            </div></figure>
             <div class="number">01</div>
             <h3 data-en="Being there for the children">Accompagner les enfants</h3>
             <p data-en="Help with care, everyday essentials and the work of carers at the orphanage in Antananarivo.">Participer aux soins, aux besoins essentiels et au travail des nounous à l'orphelinat d'Antananarivo.</p>
           </article>
           <article class="work-card">
-            <figure><div class="image-frame tint-c"><div class="empty-photo" role="img" aria-label="Emplacement pour une photo de l'alimentation et de la santé">07 — PHOTO À AJOUTER</div></div></figure>
+            <figure><div class="image-frame tint-c"><div class="empty-photo" role="img" aria-label="Emplacement pour une photo de l'alimentation et de la santé"></div>
+            
+            <img src="https://ik.imagekit.io/53bnrahwc/42314534_460925167752062_6786998503294894080_n.jpg" alt="large image">
+            
+            
+            </div></figure>
             <div class="number">02</div>
             <h3 data-en="Food and health">Alimentation et santé</h3>
             <p data-en="Contribute to a local canteen and to preventative dental hygiene activities.">Contribuer à une cantine locale et à des actions de prévention en matière d'hygiène dentaire.</p>
           </article>
           <article class="work-card">
-            <figure><div class="image-frame"><div class="empty-photo" role="img" aria-label="Emplacement pour une photographie de projet">08 — PHOTO À AJOUTER</div></div></figure>
+            <figure><div class="image-frame"><div class="empty-photo" role="img" aria-label="Emplacement pour une photographie de projet"></div>
+            
+                    <img src="https://ik.imagekit.io/53bnrahwc/40603778_451717722006140_8534611504807280640_n.jpg" alt="large image">
+            
+            </div></figure>
             <div class="number">03</div>
             <h3 data-en="Projects that matter">Des projets qui comptent</h3>
             <p data-en="Respond to one-off needs, including practical support for infrastructure and the planned 2027 holiday.">Répondre à des besoins ponctuels, notamment matériels, et préparer le projet de vacances de 2027.</p>
@@ -632,11 +664,36 @@
         </div>
         <div class="gallery">
           <figure><div class="image-frame"><div class="empty-photo" role="img" aria-label="Emplacement pour une grande photographie">09 — GRANDE PHOTO</div></div><figcaption data-en="A moment to share.">Un moment à partager.</figcaption></figure>
-          <figure><div class="image-frame tint-b"><div class="empty-photo" role="img" aria-label="Emplacement pour un portrait">10 — PHOTO</div></div></figure>
-          <figure><div class="image-frame tint-c"><div class="empty-photo" role="img" aria-label="Emplacement pour un détail photographique">11 — PHOTO</div></div></figure>
-          <figure><div class="image-frame tint-b"><div class="empty-photo" role="img" aria-label="Emplacement pour un dessin ou une photographie">12 — PHOTO OU DESSIN</div></div><figcaption data-en="A photo, a handwritten note or a small drawing could go here.">Une photo, une note manuscrite ou un petit dessin pourrait trouver sa place ici.</figcaption></figure>
+          <figure><div class="image-frame tint-b"><div class="empty-photo" role="img" aria-label="Emplacement pour un portrait"></div>
+            
+            <img src="https://ik.imagekit.io/53bnrahwc/608899023_1172286268387926_2258971638987896899_n.jpg" alt="large image">
+          
+          
+          </div></figure>
+          <figure><div class="image-frame tint-c"><div class="empty-photo" role="img" aria-label="Emplacement pour un détail photographique"></div>
+          
+          <img src="https://ik.imagekit.io/53bnrahwc/595327355_1153985303551356_2997988731072671873_n.jpg" alt="large image">
+          
+          
+          </div></figure>
+          <figure><div class="image-frame tint-b"><div class="empty-photo" role="img" aria-label="Emplacement pour un dessin ou une photographie"></div>
+          
+          
+          
+                    <img src="https://ik.imagekit.io/53bnrahwc/608928572_1172286408387912_6966422536016366829_n.jpg" alt="large image">
+          
+          
+          
+          
+          </div><figcaption data-en="A photo, a handwritten note or a small drawing could go here.">Une photo, une note manuscrite ou un petit dessin pourrait trouver sa place ici.</figcaption></figure>
           <span class="hand gallery-note" data-en="little snapshots">petits instants</span>
-          <figure><div class="image-frame tint-c"><div class="empty-photo" role="img" aria-label="Emplacement pour une photographie panoramique">13 — GRANDE PHOTO</div></div></figure>
+          <figure><div class="image-frame tint-c"><div class="empty-photo" role="img" aria-label="Emplacement pour une photographie panoramique"></div>
+          
+          
+                    <img src="https://ik.imagekit.io/53bnrahwc/473552504_1977996589378238_9019338230863193898_n.jpg" alt="large image">
+          
+          
+          </div></figure>
         </div>
            </div>
     </section>
@@ -656,7 +713,12 @@
           <a href="https://www.helloasso.com/associations/tongasoa-zazakely" target="_blank" rel="noopener noreferrer" class="subtle-link"><span data-en="Learn more on HelloAsso">Retrouver l'association sur HelloAsso</span></a>
         </div>
         <figure class="about-visual">
-          <div class="image-frame tint-b"><div class="empty-photo" role="img" aria-label="Emplacement pour une photographie de l'association">14 — PHOTO À AJOUTER</div></div>
+          <div class="image-frame tint-b"><div class="empty-photo" role="img" aria-label="Emplacement pour une photographie de l'association"></div>
+          
+            <img src="https://ik.imagekit.io/53bnrahwc/486639923_959525109664044_4185234238233112084_n.jpg" alt="large image">
+          
+          
+          </div>
           <figcaption data-en="An image of the association or its team can go here.">Une image de l'association ou de son équipe viendra ici.</figcaption>
           <span class="hand" data-en="with care, always">avec le cœur</span>
         </figure>
