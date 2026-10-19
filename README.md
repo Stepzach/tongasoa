@@ -1,36 +1,31 @@
-# Tongasoa Zazakely — static website
+# Tongasoa Zazakely
 
-A lightweight bilingual (French/English) single-page website. No build tools, JavaScript framework, accounts or backend are required.
+Deploy-ready static website. No framework, backend, build command, or cookies required.
 
 ## Deploy
 
-**Netlify / Cloudflare Pages / Vercel / another static host:** Upload the *contents* of this folder, keeping `index.html` at the site root. With Git-based deployment, select the repository root as the publish directory. Build command: **none** (or leave blank). For GitHub Pages, place the files at the root of the publishing branch and enable Pages for that branch.
+Upload the **contents** of this directory to Netlify, Cloudflare Pages, Vercel, GitHub Pages, or another static host. The entry file is `index.html`. When using Git-based hosting, set the publish directory to `/` and leave the build command blank. There are no dependencies to install.
 
-**Local preview:** From this folder, run `python3 -m http.server 8080`, then open `http://localhost:8080`.
+## Before going live
 
-## Included files
+- Confirm that all images at `ik.imagekit.io` load from the live domain. The photos are hosted externally, not in this ZIP. For guaranteed self-contained delivery, download images you own into `assets/photos/` and update `src` references. Asset downloads were not possible in the authoring environment.
+- Confirm the association information, 2027 project timing, fundraiser target (€2,000), and all external links with the association.
+- Add the real canonical site URL and `og:url` meta tag once your final domain is known. You may also choose a permanent homepage preview image on your domain.
+- Review image alt descriptions against the photographs. Current alt text intentionally describes their known context only, rather than inventing visual details.
+- If necessary, supply a privacy statement appropriate to any future tracking tools you add. The site currently doesn't include analytics or tracking scripts.
 
-- `index.html` — French-first semantic page content, metadata and translations.
-- `assets/site.css` — design system and responsive layouts, dark mode, reduced motion and high-contrast support.
-- `assets/site.js` — navigation overlay, keyboard controls, language switch and scroll reveals.
-- `assets/favicon.svg` and `assets/apple-touch-icon.png` — site icons.
-- `robots.txt` — allows search-engine crawling.
+## Files
 
-## Review before launch
+- `index.html`: site content in French; English in `data-en` attributes.
+- `assets/site.css`: layout, design tokens, responsive and dark mode styles.
+- `assets/site.js`: language switcher and accessible mobile menu.
+- `assets/favicon.svg` and `assets/apple-touch-icon.png`: site icons.
+- `robots.txt`: allow indexing.
 
-1. **Photos:** This package uses existing externally hosted photos on `ik.imagekit.io` (13 references). Make sure those images remain publicly available, the association has the rights/consent to publish them, and the crops are suitable on smaller screens. If you want a fully self-hosted site, download authorized images into `assets/` and update their `src` attributes in `index.html`.
-2. **Fonts:** The editorial serif (`Newsreader`) and handwriting (`Caveat`) load from Google Fonts. They gracefully fall back if unavailable. The previous `Nonos-Handwritting.woff` was missing from the supplied file, so this site does not reference it.
-3. **Content:** Confirm the 2027 Foulpointe project details, the €2,000 target, the legal identifier and the HelloAsso/Facebook links are still correct before publishing.
-4. **Domain / SEO:** Once you know the domain, add an absolute canonical link and `og:url` to the `<head>`; optionally add a sitemap using the same public domain.
-5. **Privacy:** The site has no first-party tracking code or cookies; it does use third-party photo hosting, Google Fonts, and external donation/social links. Review your hosting provider's privacy requirements before launch.
+## Design rules
 
-## Editing
+Warm cream, burgundy accent, Newsreader for editorial text, sans serif for interface text, one primary donation button, consistent section spacing, plain photo treatment and one handwritten signature. Avoid adding card backgrounds, arbitrary staggered layouts, decorative numbering, and multiple versions of the same information. Inspired by Impeccable's *distill*, *quieter*, *typeset*, *layout*, and *polish* guidance: https://impeccable.style/docs/.
 
-French text lives directly in `index.html`; add the English translation in the corresponding `data-en` attribute. For image descriptions, edit `alt` and `data-alt-en` together. Keep `loading="lazy"` on below-the-fold images. The top hero image intentionally loads immediately.
+## Testing
 
-## Browser behavior
-
-- Mobile/tablet menu overlays the content without changing document height; it supports Escape, outside-tap closing, keyboard navigation and screen-reader labels.
-- Touch targets and links are designed for 44px+ interaction zones.
-- OS reduced-motion and high-contrast preferences are respected.
-- Without JavaScript, the primary links remain visible and usable; the page content remains readable.
+Test menu open/close, language switching, keyboard focus, mobile device widths and external photo loads on your deployed domain. The photo URL and Google Fonts need network access; graceful system font fallbacks are provided.
